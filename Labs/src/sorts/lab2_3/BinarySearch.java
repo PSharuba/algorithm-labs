@@ -1,4 +1,4 @@
-package lab2_3;
+package sorts.lab2_3;
 
 import java.util.Scanner;
 

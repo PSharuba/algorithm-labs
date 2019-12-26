@@ -1,23 +1,27 @@
-package lab4;
+package sorts.lab4;
 
 public class BubbleSortTurbo {
 
     public BubbleSortTurbo() {
-        int len = 100;
+        int len = 10000;
         int[] arr = new int[len];
         System.out.println("Array: ");
         for (int i = 0; i < len; i++) {
-            arr[i] = (int) (Math.random() * 201 - 100);
-            System.out.print(arr[i] + " ");
+            arr[i] = (int) (Math.random() * 100001 - 50000);
+            System.out.print(arr[i] + ", ");
         }
+        long time = System.nanoTime();
         bubbleSortTurbo(arr);
+        time = System.nanoTime() - time;
         System.out.println("\nSorted array: ");
         for (int i : arr)
             System.out.print(i + " ");
+
+        System.out.println("\nTime: " + time);
     }
 
     private void bubbleSortTurbo(int[] arr) {
-        int k = 0;
+        int k;
         int n = arr.length;
         do {
             k = 0;

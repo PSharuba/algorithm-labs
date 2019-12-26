@@ -1,19 +1,22 @@
-package lab4;
+package sorts.lab4;
 
 public class QuickSort {
 
     public QuickSort() {
-        int len = 100;
+        int len = 10000;
         int[] arr = new int[len];
         System.out.println("Array: ");
         for (int i = 0; i < len; i++) {
-            arr[i] = (int) (Math.random() * 201 - 100);
-            System.out.print(arr[i]+" ");
+            arr[i] = (int) (Math.random() * 100001 - 50000);
+            System.out.print(arr[i] + " ");
         }
+        long time = System.nanoTime();
         quickSort(arr);
+        time = System.nanoTime() - time;
         System.out.println("\nSorted array: ");
-        for(int i:arr)
-            System.out.print(i+" ");
+        for (int i : arr)
+            System.out.print(i + " ");
+        System.out.println("\nTime: " + time);
     }
 
     private static void quickSort(int[] arr) {
@@ -49,6 +52,6 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
-        QuickSort sort =new QuickSort();
+        QuickSort sort = new QuickSort();
     }
 }

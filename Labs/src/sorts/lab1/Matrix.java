@@ -1,4 +1,4 @@
-package lab1;
+package sorts.lab1;
 
 public class Matrix {
     public static void main(String[] args) {
